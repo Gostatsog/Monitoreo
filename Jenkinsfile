@@ -7,15 +7,17 @@ pipeline {
           image 'python:3-alpine'
           args '-p 3001:3000'
         }
+
       }
       environment {
         HOME = '.'
       }
       steps {
         sh 'pip3 install --upgrade pip'
-        sh 'pip3 install -r requriements.txt'
+        sh 'pip3 install -r requirements.txt'
       }
     }
+
     stage('Deploy') {
       agent {
         label 'master'
