@@ -1,5 +1,4 @@
 ./static/uploaders/
-app.py
 *.json
 *.gif
 ./static/exploradores/*.json
