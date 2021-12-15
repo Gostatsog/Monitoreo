@@ -10,4 +10,4 @@ services:
     volumes:
       - ./:/usr/src/app
     working_dir: /usr/src/app
-    command: /bin/sh -c "pip3 install -r requirements.txt && python3 app.py"
+    command: /bin/sh -c "pip install -r requirements.txt && python3 app.py"
