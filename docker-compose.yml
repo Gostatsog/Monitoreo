@@ -2,7 +2,7 @@ version: "3"
 
 services:
   node_docker_monitoreo:
-    image: node:python:3.7.2
+    image: python:3-alpine
     ports:
       - "3000:3000"
     environment:
