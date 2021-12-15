@@ -11,14 +11,11 @@ pipeline {
       environment {
         HOME = '.'
       }
-      stages {
-        stage('Install') {
-          steps {
-            sh 'pip3 install -r requirements.txt'
-          }
-        }
+      steps{
+        sh 'pip3 install -r requirements.txt'
       }
     }
+
     stage('Deploy'){
       agent{
         label 'master'
