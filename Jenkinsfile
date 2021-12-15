@@ -4,7 +4,7 @@ pipeline {
     stage('Checkout, Test & Build') {
       agent {
         docker {
-          image 'python:3.7.2'
+          image 'python:3-alpine'
           args '-p 3001:3000'
         }
 
@@ -13,6 +13,7 @@ pipeline {
         HOME = '.'
       }
       steps {
+        sh 'pip3 install --upgrade pip'
         sh 'pip3 install -r requirements.txt'
       }
     }
