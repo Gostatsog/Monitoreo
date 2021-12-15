@@ -13,8 +13,8 @@ pipeline {
         HOME = '.'
       }
       steps {
-        sh 'pip3 install –upgrade pip3'
-        sh 'pip3 install -r requirements.txt'
+        sh 'pip install -upgrade pip'
+        sh 'pip install -r requirements.txt'
       }
     }
 
