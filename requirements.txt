@@ -1,8 +1,6 @@
 flask
 flask_sqlalchemy
-pprint
 pickle
-os
 csv
 wtforms
 werkzeug
