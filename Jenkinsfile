@@ -9,6 +9,8 @@ pipeline {
         skipDefaultCheckout()
       }
       steps {
+        sh 'pip3 install -r requirements.txt'
+        sh 'pip install bokeh'
         sh 'rm -rf /var/www/monitoreo'
         sh 'mkdir /var/www/monitoreo'
         sh 'cp -Rp . /var/www/monitoreo'
