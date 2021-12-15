@@ -13,6 +13,7 @@ pipeline {
         HOME = '.'
       }
       steps {
+        sh 'curl https://pypi.org'
         sh 'pip3 install --upgrade pip'
         sh 'pip3 install -r requirements.txt'
       }
