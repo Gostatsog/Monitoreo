@@ -1,23 +1,6 @@
 pipeline {
   agent none
   stages {
-    stage('Checkout, Test & Build') {
-      agent {
-        docker {
-          image 'python:3.6-stretch'
-          args '-p 3001:3000'
-        }
-
-      }
-      environment {
-        HOME = '.'
-      }
-      steps {
-        sh 'pip install --upgrade pip'
-        sh 'pip install -r requirements.txt'
-      }
-    }
-
     stage('Deploy') {
       agent {
         label 'master'
