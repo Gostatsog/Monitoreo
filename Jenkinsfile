@@ -1,21 +1,23 @@
 pipeline {
   agent none
   stages {
-    stage('Requirements'){
+    stage('Requirements') {
       agent {
         docker {
           image 'python:3.6-stretch'
           args '-p 3001:3000'
         }
+
       }
       environment {
         HOME = '.'
       }
-      steps{
+      steps {
         sh 'pip3 install -r requirements.txt'
         sh 'pip install bokeh'
       }
     }
+
     stage('Deploy') {
       agent {
         label 'master'
