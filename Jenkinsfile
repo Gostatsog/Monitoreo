@@ -4,7 +4,7 @@ pipeline {
     stage('Checkout, Test & Build') {
       agent {
         docker {
-          image 'python:3-alpine'
+          image 'python:3.6-stretch'
           args '-p 3001:3000'
         }
 
