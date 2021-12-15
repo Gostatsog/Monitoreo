@@ -1,15 +1,10 @@
 flask
 flask_sqlalchemy
-pickle
-csv
 wtforms
 werkzeug
 pandas
-glob
 bokeh
-base64
 cv2
 numpy
 glob2
 ffmpy
-datetime
