@@ -1,6 +1,25 @@
 pipeline {
   agent none
   stages {
+    stage('Checkout, Test & Build') {
+        agent {
+          docker {
+            image 'python:3-alpine'
+            args '-p 3001:3000'
+          }
+        }
+        environment {
+          HOME = '.'
+        }
+        stages {
+          stage('Install') {
+            steps {
+              sh 'pip3 install --upgrade pip'
+              sh 'pip3 install -r requriements.txt'
+            }
+          }
+        }
+    }
     stage('Deploy') {
       agent {
         label 'master'

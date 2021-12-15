@@ -8,6 +8,6 @@ services:
     environment:
       - DEBUG=myapp:*
     volumes:
-      - ./:/usr/src
-    working_dir: /usr/src
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
     command: /bin/sh -c "pip3 install -r requirements.txt && python3 app.py"
