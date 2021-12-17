@@ -4,7 +4,7 @@ pipeline {
     stage('Requirements') {
       agent {
         docker {
-          image 'python:3.9.5'
+          image 'python:3.7.2'
           args '-p 8002:8002'
         }
 
