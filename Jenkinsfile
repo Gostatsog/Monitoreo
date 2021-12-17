@@ -4,8 +4,8 @@ pipeline {
     stage('Requirements') {
       agent {
         docker {
-          image 'python:3.6-stretch'
-          args '-p 3001:3000'
+          image 'python:3.9.5'
+          args '-p 8002:8002'
         }
 
       }
@@ -14,7 +14,7 @@ pipeline {
       }
       steps {
         sh 'pip3 install -r requirements.txt'
-        sh 'pip install bokeh'
+        sh 'pip3 install bokeh'
       }
     }
 
