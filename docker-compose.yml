@@ -2,9 +2,9 @@ version: "3"
 
 services:
   node_docker_monitoreo:
-    image: python:3.9-alpine
+    image: python:3.6-stretch
     ports:
-      -8002:8002"
+      - "3000:3000"
     environment:
       - DEBUG=myapp:*
     volumes:

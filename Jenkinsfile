@@ -4,8 +4,8 @@ pipeline {
     stage('Requirements') {
       agent {
         docker {
-          image 'python:3.9-alpine'
-          args '-p 8002:8002'
+          image 'python:3.6-stretch'
+          args '-p 3001:3000'
         }
 
       }
